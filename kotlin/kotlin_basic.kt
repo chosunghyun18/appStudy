@@ -1,3 +1,5 @@
+///////  import is. same as python. function for. while. val and var.  loop when expression rranges. 
+
 //  comment line
 /*
 comment block 
@@ -8,12 +10,27 @@ comment block
 // differ between value and variable 
 // could be reassigned or not 
 
+// can't reassigned
+val a
+
+// could be changeable
+var b
+b+=1 
+
+
+// converse type in variable.     . >>> we can't cconvert small one into bigger one 
+
+val number : Int
+val str = "100".     // immutable one 
+number = str.toInt()
+
+// data ty[e struct union type 
 
 
 
-
-
-
+// using const 
+const val add1  = 0
+//val 은 런타임 시점, const val 은 컴파일 시점에 값이 할당되는 것이다.
 
 
 
