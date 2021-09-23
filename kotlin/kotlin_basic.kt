@@ -5,6 +5,8 @@
 comment block 
 */
 
+println("hello")
+print("hhh")
 
 
 // differ between value and variable 
@@ -31,6 +33,33 @@ number = str.toInt()
 // using const 
 const val add1  = 0
 //val 은 런타임 시점, const val 은 컴파일 시점에 값이 할당되는 것이다.
+
+//making list
+val list = mutableListOf<Int>()
+
+
+
+//// make  random number and put in list 
+	val random =Random()
+    val numberSet = mutableSetOf<Int>()
+    
+    while (numberSet.size < 6){
+        val randomNumber =random.nextInt(45)+1 
+        numberSet.add(randomNumber)
+    }
+    
+    println(numberSet)
+    
+   
+
+
+//// for loop 
+
+for(i in 1..45)
+{. println("hi")
+}
+
+
 
 
 
