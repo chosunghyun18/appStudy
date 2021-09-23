@@ -61,21 +61,20 @@ for(i in 1..45)
 
 //////
     
-    val random2 = Random() 
-    val list = mutableSetOf<Int>().apply{
+
+    val list = mutableListOf<Int>().apply{
         for (i in 1..45)
         {
             this.add(i)
         }
         
     }
-    list.suffle() 
+    list.shuffle() 
   	println(list.subList(0,6))  
 
-    
-}
 
-///
+	
+mutableListOf<Int>().apply
 
 
 
