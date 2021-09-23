@@ -59,7 +59,23 @@ for(i in 1..45)
 {. println("hi")
 }
 
+//////
+    
+    val random2 = Random() 
+    val list = mutableSetOf<Int>().apply{
+        for (i in 1..45)
+        {
+            this.add(i)
+        }
+        
+    }
+    list.suffle() 
+  	println(list.subList(0,6))  
 
+    
+}
+
+///
 
 
 
