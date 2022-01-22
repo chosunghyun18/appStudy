@@ -39,10 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         automaticallyImplyLeading: false,// for custom icon option setting down below
 
-        title: Image.asset('GDSCLOGO.jpg'),
+        title:
+          Image.asset('GDSCLOGO.jpg'),
+
+        leading: Builder(
+                builder :(context) => IconButton(
+              icon:  Icon(Icons.person_rounded),
+              onPressed: () =>Scaffold.of(context).openDrawer(),
+              ),
+            ),
+
+
         actions: [
           IconButton(
               onPressed: () => Navigator.of(context)
@@ -50,12 +59,54 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.search))
         ],
 
-        leading: IconButton(
-          icon:  Icon(Icons.person_rounded),
-          onPressed: () =>Scaffold.of(context).openDrawer(),
-        ),
-
       ),
+
+      drawer:
+      Container(
+        child:  Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              UserAccountsDrawerHeader(
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage('selfie.jpeg'),
+                ),
+                otherAccountsPictures: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('GDSCLOGO.jpg'),
+                  )
+                ],
+                accountEmail: Text('krischo1204@gmail.com'),
+                accountName: Text('chosung hyun'),
+                onDetailsPressed: () {
+                  print('press details');
+                },
+                decoration: BoxDecoration(
+                    color: Colors.blue[300],
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40),
+                    )),
+              ),
+
+              ListTile(
+                title: Text('Item 1111111'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+
+
       body: SafeArea(
         child: Container(
           child: Center(
@@ -72,48 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       /////////Informattion sector for
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            UserAccountsDrawerHeader(
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('selfie.jpeg'),
-              ),
-              otherAccountsPictures: [
-                CircleAvatar(
-                  backgroundImage: AssetImage('GDSCLOGO.jpg'),
-                )
-              ],
-              accountEmail: Text('krischo1204@gmail.com'),
-              accountName: Text('chosung hyun'),
-              onDetailsPressed: () {
-                print('press details');
-              },
-              decoration: BoxDecoration(
-                  color: Colors.blue[300],
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40),
-                    bottomRight: Radius.circular(40),
-                  )),
-            ),
 
-
-            ListTile(
-              title: Text('Item 1111111'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context)
