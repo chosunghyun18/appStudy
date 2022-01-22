@@ -1,6 +1,7 @@
 # due_t_demo_proj
 
-A new Flutter project.
+A new Flutter project for Demo of app GDSC solution change
+
 
 ## Getting Started
 
