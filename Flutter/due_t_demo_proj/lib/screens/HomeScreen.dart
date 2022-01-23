@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => NoPoverty()));
+                                  builder: (context) => GoodHealth()));
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat3.jpg'),
@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ZeroHunger()));
+                                  builder: (context) => QualityEducation());
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat4.jpg'),
@@ -213,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => NoPoverty()));
+                                  builder: (context) => GenderEquality());
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat5.jpg'),
@@ -235,7 +235,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ZeroHunger()));
+                                  builder: (context) => CleanWater()));
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat6.jpg'),
