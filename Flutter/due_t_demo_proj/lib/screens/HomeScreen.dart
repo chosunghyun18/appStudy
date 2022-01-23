@@ -19,10 +19,24 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading:
-            false, // for custom icon option setting down below
+        automaticallyImplyLeading: false, // for custom icon option setting down below
 
-        title: Image.asset('GDSCLOGO.jpg'),
+        // title:  AspectRatio(
+        //     aspectRatio: 1.6,
+        //     child: Image.asset(
+        //       'assets/GDSCLOGO.jpg',
+        //       fit: BoxFit.cover,
+        //     ),
+        //   ),
+
+          title: Image.asset('assets/GDSCLOGO.jpg', width: 150, height: 140),
+
+
+
+
+
+
+        // title: Image.asset('assets/GDSCLOGO.jpg'),
 
         leading: Builder(
           builder: (context) => IconButton(
@@ -87,11 +101,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Center(
 
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+
+
             children: <Widget>[
               // 1 ~2
               Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     Material(
@@ -147,6 +166,8 @@ class _HomeScreenState extends State<HomeScreen> {
               // 3 ~4
               Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     Material(
@@ -201,6 +222,8 @@ class _HomeScreenState extends State<HomeScreen> {
               // 5 ~6
               Container(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     Material(
