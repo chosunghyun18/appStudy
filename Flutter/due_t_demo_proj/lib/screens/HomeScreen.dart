@@ -46,14 +46,14 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               UserAccountsDrawerHeader(
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('selfie.jpeg'),
+                  backgroundImage: AssetImage('assets/selfie.jpeg'),
                 ),
                 otherAccountsPictures: [
                   CircleAvatar(
-                    backgroundImage: AssetImage('GDSCLOGO.jpg'),
+                    backgroundImage: AssetImage('assets/GDSCLOGO.jpg'),
                   )
                 ],
-                accountEmail: Text('krischo1204@gmail.com'),
+                accountEmail: Text('assets/krischo1204@gmail.com'),
                 accountName: Text('chosung hyun'),
                 onDetailsPressed: () {
                   print('press details');
@@ -84,13 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
 ////////////////////////////////////////
       body: SafeArea(
-        child: Container(
+        child: Center(
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-
               // 1 ~2
-              Container(
+              Center(
                 child: Row(
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
               // 3 ~4
-              Container(
+              Center(
                 child: Row(
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
