@@ -88,12 +88,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
+
+              // 1 ~2
+              Container(
                 child: Row(
                   children: <Widget>[
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                    Expanded(
-                      child: Material(
+                    Material(
                         elevation: 8,
                         borderRadius: BorderRadius.circular(28),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -113,12 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
 
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-                    Expanded(
-                      child: Material(
+                    Material(
                         elevation: 8,
                         borderRadius: BorderRadius.circular(28),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -138,17 +136,130 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
                   ],
                 ),
               ),
+
+
+
+
+              // 3 ~4
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    Material(
+                      elevation: 8,
+                      borderRadius: BorderRadius.circular(28),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NoPoverty()));
+                        },
+                        child: Ink.image(
+                          image: AssetImage('assets/cat3.jpg'),
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    Material(
+                      elevation: 8,
+                      borderRadius: BorderRadius.circular(28),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ZeroHunger()));
+                        },
+                        child: Ink.image(
+                          image: AssetImage('assets/cat4.jpg'),
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                  ],
+                ),
+              ),
+
+
+
+              // 5 ~6
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    Material(
+                      elevation: 8,
+                      borderRadius: BorderRadius.circular(28),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NoPoverty()));
+                        },
+                        child: Ink.image(
+                          image: AssetImage('assets/cat5.jpg'),
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    Material(
+                      elevation: 8,
+                      borderRadius: BorderRadius.circular(28),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: InkWell(
+                        splashColor: Colors.black26,
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ZeroHunger()));
+                        },
+                        child: Ink.image(
+                          image: AssetImage('assets/cat6.jpg'),
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                  ],
+                ),
+              ),
+
+
+
+
+
+
+
+
+
+
+
             ],
           ),
         ),
