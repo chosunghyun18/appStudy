@@ -8,9 +8,6 @@ import 'package:due_t_demo_proj/screens/GdscSector/QualityEducation.dart';
 import 'package:due_t_demo_proj/screens/GdscSector/GenderEquality.dart';
 import 'package:due_t_demo_proj/screens/GdscSector/CleanWater.dart';
 
-
-
-
 class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -85,39 +82,79 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
 
+////////////////////////////////////////
       body: SafeArea(
         child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    Expanded(
+                      child: Material(
+                        elevation: 8,
+                        borderRadius: BorderRadius.circular(28),
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        child: InkWell(
+                          splashColor: Colors.black26,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => NoPoverty()));
+                          },
+                          child: Ink.image(
+                            image: AssetImage('assets/cat1.jpg'),
+                            height: 200,
+                            width: 200,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
 
-          child: Center(
-            child: Material(
-              elevation: 8,
-              borderRadius: BorderRadius.circular(28),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: InkWell(
-                  splashColor: Colors.black26,
-                  onTap: () {
-                    Navigator.push(
-                    context,MaterialPageRoute(  builder: (context) => ZeroHunger())
-                    );
-                  },
-                  child: Ink.image(
-                    image: AssetImage('assets/cat1.jpg'),
-                    height: 200,
-                    width: 200,
-                    fit: BoxFit.cover,
-                  ),
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                    Expanded(
+                      child: Material(
+                        elevation: 8,
+                        borderRadius: BorderRadius.circular(28),
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        child: InkWell(
+                          splashColor: Colors.black26,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ZeroHunger()));
+                          },
+                          child: Ink.image(
+                            image: AssetImage('assets/cat2.jpg'),
+                            height: 200,
+                            width: 200,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
-
-
-
-
         ),
       ),
 
       /////////Informattion sector for
-
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context)
             .push(MaterialPageRoute(builder: (_) => Subscribe())),
