@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => QualityEducation());
+                                  builder: (context) => QualityEducation()));
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat4.jpg'),
@@ -213,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => GenderEquality());
+                                  builder: (context) => GenderEquality()));
                         },
                         child: Ink.image(
                           image: AssetImage('assets/cat5.jpg'),
@@ -249,14 +249,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-
-
-
-
-
-
-
-
 
 
 
