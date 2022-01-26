@@ -33,9 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-
-
-
         // title: Image.asset('assets/GDSCLOGO.jpg'),
 
         leading: Builder(
@@ -80,17 +77,49 @@ class _HomeScreenState extends State<HomeScreen> {
                     )),
               ),
               ListTile(
-                title: Text('Item 1111111'),
-                onTap: () {
-                  Navigator.pop(context);
+                leading:Icon(
+                  Icons.home,
+                  color:Colors.grey[850],
+                ),
+                title: Text('회원정보 보기'),
+                onTap:(){
+                  print('회원정보 보기');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>Subscribe()
+                      )
+                  );
                 },
+                trailing: Icon(Icons.arrow_forward_ios),
               ),
+
+              // ListTile
+              //   (
+              //   title: Text('Item 2'),
+              //   onTap: () {
+              //     Navigator.pop(context);
+              //   },
+              // ),
+              //
+
+
               ListTile(
-                title: Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
+                  leading:Icon(
+                    Icons.image,
+                    color:Colors.grey[850],
+                  ),
+                  title: Text('구독현황'),
+                  onTap:(){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>Subscribe()
+                        )
+                    );
+                  }
+                  ,trailing: Icon(Icons.arrow_forward_ios)
+              )
             ],
           ),
         ),
@@ -268,13 +297,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    /////////////////////////////////////////
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                   ],
                 ),
               ),
-
-
-
             ],
           ),
         ),
