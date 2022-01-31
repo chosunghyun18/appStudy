@@ -4,10 +4,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-Future<Album> fetchAlbum() async
-{
-  final response = await http
-      .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+Future<Album> fetchAlbum() async {
+  final response = await http.get(Uri.parse(
+      "https://1e85ce8f-6ffc-402d-9365-0576000728de.mock.pstmn.io/api/members"));
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
@@ -21,24 +20,75 @@ Future<Album> fetchAlbum() async
 }
 
 class Album {
-  final int userId;
-  final int id;
-  final String title;
+  final int count;
+  final List<Data> data;
 
   const Album({
-    required this.userId,
-    required this.id,
-    required this.title,
+    // required this.u_username,
+    required this.count,
+    required this.data,
   });
 
   factory Album.fromJson(Map<String, dynamic> json) {
-    return Album(
-      userId: json['userId'],
-      id: json['id'],
-      title: json['title'],
-    );
+    var list = json['data'] as List;
+    print(list.runtimeType);
+    List<Data> dataList = list.map((i) => Data.fromJson(i)).toList();
+
+    return Album(count: json['count'], data: dataList);
   }
 }
+
+class Data {
+  final String u_username;
+  final String u_name;
+  final String u_email;
+  final String u_phone;
+  final String u_birth;
+  final String u_sub;
+
+  Data({
+    required this.u_username,
+    required this.u_name,
+    required this.u_email,
+    required this.u_phone,
+    required this.u_birth,
+    required this.u_sub,
+  });
+
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return Data(
+        u_username: json['u_username'],
+        u_name: json['u_name'],
+        u_email: json['u_email'],
+        u_phone: json['u_phone'],
+        u_birth: json['u_birth'],
+        u_sub: json['u_sub']);
+  }
+}
+
+//
+// class Album {
+//   final int userId;
+//   final int id;
+//   final String title;
+//   // final String u_username;
+//
+//   const Album({
+//     // required this.u_username,
+//     required this.userId,
+//     required this.id,
+//     required this.title,
+//   });
+//
+//   factory Album.fromJson(Map<String, dynamic> json) {
+//     return Album(
+//       // u_username: json['u_username'],
+//       userId: json['userId'],
+//       id: json['id'],
+//       title: json['title'],
+//     );
+//   }
+// }
 
 void main() => runApp(const MyApp());
 
@@ -49,7 +99,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp>
+{
   late Future<Album> futureAlbum;
 
   @override
@@ -74,7 +125,7 @@ class _MyAppState extends State<MyApp> {
             future: futureAlbum,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data!.title);
+                return Text(snapshot.data!.data[0].u_sub);
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               }
