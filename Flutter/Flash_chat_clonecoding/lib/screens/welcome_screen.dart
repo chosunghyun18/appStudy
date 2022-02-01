@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
 
-
 class WelcomeScreen extends StatefulWidget {
-  static const String id = "welcome_screen" ;
+  static const String id = "welcome_screen";
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
@@ -15,13 +14,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-
-        title: Text("Flutter Demo"),
-
-
-      ),
-
+      appBar: AppBar(title: Text('scaffold 의 AppBar()')),
+      drawer: Container(child: Text("this is drawer")),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -29,10 +23,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
-              children: <Widget>[
-                Container(
-                  child: Image.asset('images/logo.png'),
-                  height: 60.0,
+              children: [
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    child: Image.asset('images/logo.png'),
+                    height: 60.0,
+                  ),
                 ),
                 Text(
                   'Flash Chat',
@@ -55,9 +52,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to login screen.
-                    Navigator.pushNamed(context,LoginScreen.id);
+                    Navigator.pushNamed(context, LoginScreen.id);
                   },
-
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text(
@@ -66,7 +62,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
@@ -76,7 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to registration screen.
-                    Navigator.pushNamed(context,LoginScreen.id);
+                    Navigator.pushNamed(context, RegistrationScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -92,3 +87,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
+
+
+
+
