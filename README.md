@@ -1,2 +1,2 @@
 # appstudy
-Android study with kotlin 
+Android study wtihs kotlin and Flutter Dart
