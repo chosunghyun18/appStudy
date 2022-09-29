@@ -1,12 +1,35 @@
 package choaop.p2.kotlinapp1
 
+import choaop.p2.kotlinapp1.Basic.BasicLoop
+import java.lang.StringBuilder
+
+
 fun main(){
     // arg = "hello"
-    print("hello")
+    val age  = 2
+    var myage = 40
+    var yourage: Int? = 24
 
     var result = addUp(1,2)
 
-    print(result)
+
+
+    var str1: String ="a"
+    var str3 = "a"
+    val a =String(StringBuilder("a"))
+    val b =String(StringBuilder("a"))
+
+    print(" ")
+    print(str1 == str3) // t
+    print(" ")
+    print(str1 === str3) //t
+
+
+    print(" ")
+    print(a == b) // t
+    print(" ")
+    print(a === b) //f
+        /// String Constant Pool 저장 안되게함
 }
 
 
@@ -15,8 +38,6 @@ fun main(){
 // parm = a, b   request Parma ?
 
 fun addUp(a: Int, b: Int): Int{
-    // the return keyword indicates that this function will return the following value
-    // once this function is called and executed
     return (a+b)
 }
 
