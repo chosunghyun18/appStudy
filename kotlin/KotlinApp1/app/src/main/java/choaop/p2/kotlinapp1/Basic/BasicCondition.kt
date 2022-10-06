@@ -8,7 +8,6 @@ class BasicCondition {
 }
 
 
-
 /// Expect Java Switch but real -> Java If else
 
 fun strNum(x: Int?):  String {

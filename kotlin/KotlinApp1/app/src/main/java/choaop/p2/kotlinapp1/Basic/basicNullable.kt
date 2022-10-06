@@ -10,19 +10,14 @@ class basicNullable {
         // the compiler can detect
         // possible NullPointerException errors at compile time
         // and reduce the possibility of having them thrown at runtime.
-        var name: String = "Denis"
-        // name = null // Compilation Error
+
+        ///var name: String = "Denis"
+        //name = null // Compilation Error
 
         var nullableName: String? = "Denis"
         nullableName = null // Works
 
-        // Here name cannot/must not be null
-        val len = name.length
-        val upper = name.lowercase()
 
-        // but the same methods won't work on nullable types
-         // val len2 = nullableName.length // Compilation Error
-        // So how can we solve this? We could do a null check before hand
 
         val nullableName2: String? = "Denis"
 
@@ -59,6 +54,7 @@ class basicNullable {
         // In order to perform an operation only if the
         // variable is not null, we can use the safe call
         // operator with let -
+
         val nullableName4: String? = null
         val name2 = nullableName4 ?: "Guest"
 
